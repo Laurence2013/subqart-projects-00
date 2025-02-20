@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import express, {Router, Request, Response, NextFunction} from 'express';
+import express, { Router, Request, Response, NextFunction } from 'express';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import createError from 'http-errors';

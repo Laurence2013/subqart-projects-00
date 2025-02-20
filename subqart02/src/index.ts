@@ -1,4 +1,5 @@
-function sayHello(name: string){
-	console.log(`Hello ${name}`);
+function sayHello(fullName: string){
+	return {name: fullName};
 };
-sayHello('Lozza');
+
+export default sayHello;
