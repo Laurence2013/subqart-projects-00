@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "f2a915fd-d752-490c-97ce-850a0d7fb81f",
+		"name": "project00",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10867444"
+	},
+	"item": [
+		{
+			"name": "home-page-testing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3030",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home-page-testing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"David Thomas\",\n    \"email\": \"david.thomas@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030"
+				}
+			},
+			"response": []
+		}
+	]
+}

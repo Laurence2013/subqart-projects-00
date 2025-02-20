@@ -1,0 +1,10 @@
+{
+	"extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+		"outDir": "dist",
+		"allowJs": true,
+		"forceConsistentCasingInFileNames": true
+  },
+	"include": ["src/**/*", "router.ts", "databases/mongodb.ts", "server/server.ts", "routes/**/*"],
+	"exclude": ["node_modules"]
+}
