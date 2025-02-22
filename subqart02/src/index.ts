@@ -1,15 +1,10 @@
 import { Map, List } from 'immutable';
 
 const user = Map({
-	name: 'John Doe',
-	age: 30,
-	hobbies: List(['Reading', 'Coding', 'Gaming'])
+	desc: 'Testing MongoDB'
 });
-
-console.log(user.get('name'));
-
 function sayHello(fullName: string | null){
-	return {name: user.get('name')};
+	return {name: user.get('desc')};
 };
 
 export default sayHello;
