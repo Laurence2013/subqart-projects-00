@@ -5,6 +5,6 @@
 		"allowJs": true,
 		"forceConsistentCasingInFileNames": true
   },
-	"include": ["src/**/*", "router.ts", "databases/mongodb.ts", "server/server.ts", "routes/**/*"],
+	"include": ["src/**/*", "router.ts", "databases/**/*", "server/**/*", "routes/**/*"],
 	"exclude": ["node_modules"]
 }
