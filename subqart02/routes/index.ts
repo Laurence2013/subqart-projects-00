@@ -6,10 +6,10 @@ import userModel from '../src/models/user.model.js';
 const router = express.Router();
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
-	//const name: string = 'Craig Johnson';
 	const getName: any = sayHello('');
 	try{
 		userModel.find({}).then((data: any) => {
+			console.log(data);
 			res.json({
 				msg: getName.name,
 				payload: data

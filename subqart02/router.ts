@@ -7,14 +7,11 @@ import createError from 'http-errors';
 import logger from 'morgan';
 
 import router from './routes/index.js';
-//import connectDB from './databases/mongodb.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-
-//connectDB();
 
 app.use(helmet());
 app.use(logger('dev'));
