@@ -10,4 +10,4 @@ function test00(num1: number, num2: number){
 	return num1 + num2;
 }
 
-export default {sayHello, test00};
+export {sayHello, test00};

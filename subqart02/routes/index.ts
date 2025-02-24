@@ -1,17 +1,19 @@
 import express, {Router, Request, Response, NextFunction} from 'express';
 
-import sayHello from '../src/index.js'
+import { sayHello, test00 } from '../src/index.js'
 import userModel from '../src/models/user.model.js';
 
 const router = express.Router();
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
-	const getName: any = sayHello('');
+	const getName: any	= sayHello('');
+	const test01: any		= test00(1,5);
 	try{
 		userModel.find({}).then((data: any) => {
 			console.log(data);
 			res.json({
 				msg: getName.name,
+				test02:  test01,
 				payload: data
 			});
 		});

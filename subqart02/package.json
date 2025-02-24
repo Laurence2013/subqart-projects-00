@@ -7,12 +7,22 @@
     "start": "node dist/server/server.js",
     "dev": "concurrently \"tsc -w\" \"nodemon\"",
     "dev:ts-node": "nodemon",
-    "build": "tsc",
+    "build": "tsc ",
     "clean": "rimraf dist",
     "test:api": "newman run postman/example_collection.json",
-    "test:jest": "jest testings",
+		"test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
+  },
+	"jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+		"testMatch": ["**/?(*.)+(spec|test).[jt]s?(x)"], 
+    "coverageDirectory": "coverage", 
+    "collectCoverage": true, 
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
   },
   "keywords": [],
   "author": "",
