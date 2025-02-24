@@ -10,19 +10,9 @@
     "build": "tsc ",
     "clean": "rimraf dist",
     "test:api": "newman run postman/example_collection.json",
-		"test": "jest",
+		"test:jest": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
-  },
-	"jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-		"testMatch": ["**/?(*.)+(spec|test).[jt]s?(x)"], 
-    "coverageDirectory": "coverage", 
-    "collectCoverage": true, 
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
-    }
   },
   "keywords": [],
   "author": "",
@@ -66,7 +56,7 @@
     "nodemon": "^3.1.9",
     "rimraf": "^6.0.1",
     "rxjs": "^7.8.1",
-    "ts-jest": "^29.2.5",
+    "ts-jest": "^29.2.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.24.1"

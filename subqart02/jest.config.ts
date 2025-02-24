@@ -6,9 +6,8 @@ const config: Config = {
 	testMatch: ["**/?(*.)+(spec|test).[jt]s?(x)"], 
 	coverageDirectory: 'coverage', 
 	collectCoverage: true, 
-	moduleNameMapper: {
+	/*moduleNameMapper: {
 		'^@/(.*)$': '<rootDir>/src/$1'
-	}
+	}*/
 };
-//export default config;
-module.exports = config;
+export default config;
