@@ -1,7 +1,7 @@
 {
 	"extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
-		"module": "ESNext", //This is needed for npm run build
+		"module": "ESNext", //This is needed for npm run build, because it conflicts with npm run test:jest
     "moduleResolution": "node",
 		"outDir": "dist",
 		"allowJs": true,
