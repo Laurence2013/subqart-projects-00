@@ -7,6 +7,6 @@
 		"allowJs": true,
 		"forceConsistentCasingInFileNames": true
   },
-	"include": ["src/**/*", "router.ts", "databases/**/*", "server/**/*", "routes/**/*"],
+	"include": ["src/**/*", "router.ts", "databases/**/*", "servers/**/*", "routes/**/*"],
 	"exclude": ["node_modules"]
 }

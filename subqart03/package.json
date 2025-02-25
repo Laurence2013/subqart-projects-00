@@ -2,9 +2,11 @@
   "name": "subqart03",
   "version": "1.0.0",
   "description": "System specifications:",
-  "main": "index.js",
+	"main": "dist/src/index.js",
+  "main": "",
+	"type": "module",
   "scripts": {
-		"start": "node dist/server/server.js",
+		"start": "node dist/servers/server.js",
     "dev": "concurrently \"tsc -w\" \"nodemon\"",
     "dev:ts-node": "nodemon",
     "build": "tsc ",
