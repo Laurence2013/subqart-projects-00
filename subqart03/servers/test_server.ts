@@ -3,7 +3,7 @@ import http from 'http';
 import app from '../router.js';
 import test_mongodb from '../databases/test_databases/test_mongodb.js';
 
-const port = process.env.PORT || '4000';
+const port = process.env.PORT || '3030';
 
 app.set('port', port);
 
