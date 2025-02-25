@@ -18,7 +18,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
-// app.use(express.static(dirname.join(__dirname, 'public')));
 app.use(express.static(__dirname));
 
 app.use('/', router);
@@ -34,5 +33,4 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 	res.render('error');
 });
 
-// module.exports = app;
 export default app;
