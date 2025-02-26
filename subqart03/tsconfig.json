@@ -8,5 +8,5 @@
 		"forceConsistentCasingInFileNames": true
   },
 	"include": ["src/**/*", "router.ts", "databases/**/*", "servers/**/*", "routes/**/*"],
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", "eslint.config.js"]
 }
