@@ -35,7 +35,7 @@ router.post('/add', (req: Request, res: Response) => {
 		res.json({error: 'Invalid Add Request!'});
 	}
 });
-router.post('/add2', (req: Request, res: Response) => {
+router.post('/add22', (req: Request, res: Response) => {
 	try{
 		res.json({msg: 'data added successfully from /add2...!'})
 	}catch{
