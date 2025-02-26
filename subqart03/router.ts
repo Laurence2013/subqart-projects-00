@@ -1,12 +1,13 @@
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import express, { Router, Request, Response, NextFunction } from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import createError from 'http-errors';
 import logger from 'morgan';
 
 import router from './routes/index.js';
+import { CustomError } from './src/interfaces/customErrors.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -22,14 +23,13 @@ app.use(express.static(__dirname));
 
 app.use('/', router);
 
-app.use((req: Request, res: Response, next: NextFunction) => {
+app.use((next: NextFunction) => {
 	next(createError(404));
 });
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-	res.locals.message = err.message;
+app.use((err: CustomError, req: Request, res: Response) => {
 	res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-	res.status(err.status || 500);
+	res.status(err.status || 500).json({error: err.message});
 	res.render('error');
 });
 

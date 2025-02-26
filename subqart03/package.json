@@ -12,6 +12,7 @@
     "clean": "rimraf dist",
     "test:api": "newman run postman/example_collection.json",
     "test:jest": "jest",
+		"lint": "eslint",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },

@@ -1,16 +1,16 @@
-import express, { Router, Request, Response, NextFunction } from 'express';
+import express, { Request, Response } from 'express';
 
 import { sayHello, test00 } from '../src/index.js'
 import userModel from '../src/models/user.model.js';
+import { SayHello } from '../src/interfaces/customErrors.js';
 
 const router = express.Router();
 
-router.get('/', (req: Request, res: Response, next: NextFunction) => {
-	const getName: any = sayHello('');
-	const test01: any = test00(1, 5);
+router.get('/', (req: Request, res: Response) => {
+	const getName: SayHello = sayHello('');
+	const test01: number = test00(1, 5);
 	try {
-		userModel.find({}).then((data: any) => {
-			console.log(data);
+		userModel.find({}).then((data) => {
 			res.json({
 				msg: getName.name,
 				test02: test01,
@@ -21,7 +21,7 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
 		res.json({err});
 	}
 });
-router.post('/add', (req: Request, res: Response, next: NextFunction) => {
+router.post('/add', (req: Request, res: Response) => {
 	try {
 		const user = new userModel({
 			username: 'daviJ999',
@@ -30,17 +30,15 @@ router.post('/add', (req: Request, res: Response, next: NextFunction) => {
 		});
 		user.save().then(() => res.json({
 				msg: 'data added successfully...!'
-			})).catch((err: string) => res.json({
-				err
-			}));
-	}catch (err){
+			})).catch((err: SayHello) => res.json({error: err}));
+	}catch{
 		res.json({error: 'Invalid Add Request!'});
 	}
 });
-router.post('/add2', (req: Request, res: Response, next: NextFunction) => {
+router.post('/add2', (req: Request, res: Response) => {
 	try{
 		res.json({msg: 'data added successfully from /add2...!'})
-	}catch(err){
+	}catch{
 		res.json({error: 'Invalid Add Request!'});
 	}
 });
